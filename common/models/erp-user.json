@@ -3,14 +3,14 @@
   "plural": "Users",
   "base": "User",
   "idInjection": true,
-  "strictDelete": "true",
   "options": {
     "validateUpsert": true
   },
+  "strictDelete": "true",
   "properties": {
     "realm": false,
-    "credentials": null,
-    "challenges": null,
+    "credentials": false,
+    "challenges": false,
     "emailVerified": false,
     "status": false,
     "lastUpdated": false

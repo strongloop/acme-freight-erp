@@ -2,10 +2,10 @@
   "name": "Address",
   "base": "Model",
   "idInjection": true,
-  "strictDelete": "true",
   "options": {
     "validateUpsert": true
   },
+  "strictDelete": "true",
   "properties": {
     "city": {
       "type": "string",

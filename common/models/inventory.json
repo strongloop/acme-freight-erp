@@ -2,18 +2,24 @@
   "name": "Inventory",
   "base": "PersistedModel",
   "idInjection": true,
-  "strictDelete": "true",
   "options": {
     "validateUpsert": true
   },
+  "strictDelete": "true",
+  "mixins": {
+    "Isolated": {}
+  },
+  "hidden": [
+    "demoId"
+  ],
   "properties": {
     "quantity": {
       "type": "number",
       "default": "0"
     },
     "demoId": {
-      "required": true,
-      "type": "number"
+      "type": "number",
+      "required": true
     }
   },
   "validations": [],
@@ -45,10 +51,6 @@
       "foreignKey": "demoId"
     }
   },
-  "mixins": {
-    "Isolated": {}
-  },
-  "hidden": ["demoId"],
   "acls": [
     {
       "accessType": "*",

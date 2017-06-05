@@ -2,10 +2,10 @@
   "name": "DistributionCenter",
   "base": "PersistedModel",
   "idInjection": true,
-  "strictDelete": "true",
   "options": {
     "validateUpsert": true
   },
+  "strictDelete": "true",
   "properties": {},
   "validations": [],
   "relations": {

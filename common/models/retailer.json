@@ -2,14 +2,20 @@
   "name": "Retailer",
   "base": "PersistedModel",
   "idInjection": true,
-  "strictDelete": "true",
   "options": {
     "validateUpsert": true
   },
+  "strictDelete": "true",
+  "mixins": {
+    "Isolated": {}
+  },
+  "hidden": [
+    "demoId"
+  ],
   "properties": {
     "demoId": {
-      "required": true,
-      "type": "number"
+      "type": "number",
+      "required": true
     }
   },
   "validations": [],
@@ -43,10 +49,6 @@
       }
     }
   },
-  "mixins": {
-    "Isolated": {}
-  },
-  "hidden": ["demoId"],
   "acls": [
     {
       "accessType": "*",

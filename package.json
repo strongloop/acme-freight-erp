@@ -1,5 +1,5 @@
 {
-  "name": "logistics-wizard-erp",
+  "name": "acme-freight-erp",
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {

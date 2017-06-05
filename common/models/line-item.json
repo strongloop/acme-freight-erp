@@ -2,10 +2,17 @@
   "name": "LineItem",
   "base": "PersistedModel",
   "idInjection": true,
-  "strictDelete": "true",
   "options": {
     "validateUpsert": true
   },
+  "strictDelete": "true",
+  "mixins": {
+    "Isolated": {},
+    "Integrity": {}
+  },
+  "hidden": [
+    "demoId"
+  ],
   "properties": {
     "quantity": {
       "type": "number",
@@ -13,12 +20,12 @@
       "default": "0"
     },
     "productId": {
-      "required": true,
-      "type": "number"
+      "type": "number",
+      "required": true
     },
     "demoId": {
-      "required": true,
-      "type": "number"
+      "type": "number",
+      "required": true
     }
   },
   "validations": [],
@@ -34,11 +41,6 @@
       "foreignKey": "demoId"
     }
   },
-  "mixins": {
-    "Isolated": {},
-    "Integrity": {}
-  },
-  "hidden": ["demoId"],
   "acls": [
     {
       "accessType": "*",
